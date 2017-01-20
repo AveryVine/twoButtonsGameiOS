@@ -1,0 +1,555 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF1DE4281CCADE1800ECA05A /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1DE4271CCADE1800ECA05A /* StatisticsViewController.swift */; };
+		FF1DE42A1CCAE02500ECA05A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1DE4291CCAE02500ECA05A /* SettingsViewController.swift */; };
+		FF1DE42C1CCAE6F500ECA05A /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1DE42B1CCAE6F500ECA05A /* Data.swift */; };
+		FF5C64AC1CCAC5E1007AE827 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C64AB1CCAC5E1007AE827 /* AppDelegate.swift */; };
+		FF5C64AE1CCAC5E1007AE827 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C64AD1CCAC5E1007AE827 /* HomeViewController.swift */; };
+		FF5C64B11CCAC5E1007AE827 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF5C64AF1CCAC5E1007AE827 /* Main.storyboard */; };
+		FF5C64B31CCAC5E1007AE827 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF5C64B21CCAC5E1007AE827 /* Assets.xcassets */; };
+		FF5C64B61CCAC5E1007AE827 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF5C64B41CCAC5E1007AE827 /* LaunchScreen.storyboard */; };
+		FF5C64C11CCAC5E1007AE827 /* The_Simon_Effect__No_Tabs_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C64C01CCAC5E1007AE827 /* The_Simon_Effect__No_Tabs_Tests.swift */; };
+		FF5C64CC1CCAC5E1007AE827 /* The_Simon_Effect__No_Tabs_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C64CB1CCAC5E1007AE827 /* The_Simon_Effect__No_Tabs_UITests.swift */; };
+		FF5C64DA1CCAC676007AE827 /* InGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C64D91CCAC676007AE827 /* InGameViewController.swift */; };
+		FF79F4261CD923C00072E8D5 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF79F4241CD91EB90072E8D5 /* iAd.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF5C64BD1CCAC5E1007AE827 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF5C64A01CCAC5E1007AE827 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF5C64A71CCAC5E1007AE827;
+			remoteInfo = "The Simon Effect (No Tabs)";
+		};
+		FF5C64C81CCAC5E1007AE827 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF5C64A01CCAC5E1007AE827 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF5C64A71CCAC5E1007AE827;
+			remoteInfo = "The Simon Effect (No Tabs)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FF1DE4271CCADE1800ECA05A /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		FF1DE4291CCAE02500ECA05A /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		FF1DE42B1CCAE6F500ECA05A /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		FF5C64A81CCAC5E1007AE827 /* Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF5C64AB1CCAC5E1007AE827 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FF5C64AD1CCAC5E1007AE827 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FF5C64B01CCAC5E1007AE827 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FF5C64B21CCAC5E1007AE827 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FF5C64B51CCAC5E1007AE827 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FF5C64B71CCAC5E1007AE827 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF5C64BC1CCAC5E1007AE827 /* Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF5C64C01CCAC5E1007AE827 /* The_Simon_Effect__No_Tabs_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Simon_Effect__No_Tabs_Tests.swift; sourceTree = "<group>"; };
+		FF5C64C21CCAC5E1007AE827 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF5C64C71CCAC5E1007AE827 /* Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF5C64CB1CCAC5E1007AE827 /* The_Simon_Effect__No_Tabs_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Simon_Effect__No_Tabs_UITests.swift; sourceTree = "<group>"; };
+		FF5C64CD1CCAC5E1007AE827 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF5C64D91CCAC676007AE827 /* InGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InGameViewController.swift; sourceTree = "<group>"; };
+		FF79F4241CD91EB90072E8D5 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF5C64A51CCAC5E1007AE827 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF79F4261CD923C00072E8D5 /* iAd.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF5C64B91CCAC5E1007AE827 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF5C64C41CCAC5E1007AE827 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FF5C649F1CCAC5E1007AE827 = {
+			isa = PBXGroup;
+			children = (
+				FF79F4241CD91EB90072E8D5 /* iAd.framework */,
+				FF5C64AA1CCAC5E1007AE827 /* The Simon Effect (No Tabs) */,
+				FF5C64BF1CCAC5E1007AE827 /* The Simon Effect (No Tabs)Tests */,
+				FF5C64CA1CCAC5E1007AE827 /* The Simon Effect (No Tabs)UITests */,
+				FF5C64A91CCAC5E1007AE827 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FF5C64A91CCAC5E1007AE827 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF5C64A81CCAC5E1007AE827 /* Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename.app */,
+				FF5C64BC1CCAC5E1007AE827 /* Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename.xctest */,
+				FF5C64C71CCAC5E1007AE827 /* Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF5C64AA1CCAC5E1007AE827 /* The Simon Effect (No Tabs) */ = {
+			isa = PBXGroup;
+			children = (
+				FF5C64AB1CCAC5E1007AE827 /* AppDelegate.swift */,
+				FF1DE42B1CCAE6F500ECA05A /* Data.swift */,
+				FF5C64AD1CCAC5E1007AE827 /* HomeViewController.swift */,
+				FF5C64D91CCAC676007AE827 /* InGameViewController.swift */,
+				FF1DE4291CCAE02500ECA05A /* SettingsViewController.swift */,
+				FF1DE4271CCADE1800ECA05A /* StatisticsViewController.swift */,
+				FF5C64AF1CCAC5E1007AE827 /* Main.storyboard */,
+				FF5C64B21CCAC5E1007AE827 /* Assets.xcassets */,
+				FF5C64B41CCAC5E1007AE827 /* LaunchScreen.storyboard */,
+				FF5C64B71CCAC5E1007AE827 /* Info.plist */,
+			);
+			path = "The Simon Effect (No Tabs)";
+			sourceTree = "<group>";
+		};
+		FF5C64BF1CCAC5E1007AE827 /* The Simon Effect (No Tabs)Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FF5C64C01CCAC5E1007AE827 /* The_Simon_Effect__No_Tabs_Tests.swift */,
+				FF5C64C21CCAC5E1007AE827 /* Info.plist */,
+			);
+			path = "The Simon Effect (No Tabs)Tests";
+			sourceTree = "<group>";
+		};
+		FF5C64CA1CCAC5E1007AE827 /* The Simon Effect (No Tabs)UITests */ = {
+			isa = PBXGroup;
+			children = (
+				FF5C64CB1CCAC5E1007AE827 /* The_Simon_Effect__No_Tabs_UITests.swift */,
+				FF5C64CD1CCAC5E1007AE827 /* Info.plist */,
+			);
+			path = "The Simon Effect (No Tabs)UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF5C64A71CCAC5E1007AE827 /* Two Buttons - The Reflex Tapping Game */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF5C64D01CCAC5E1007AE827 /* Build configuration list for PBXNativeTarget "Two Buttons - The Reflex Tapping Game" */;
+			buildPhases = (
+				FF5C64A41CCAC5E1007AE827 /* Sources */,
+				FF5C64A51CCAC5E1007AE827 /* Frameworks */,
+				FF5C64A61CCAC5E1007AE827 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Two Buttons - The Reflex Tapping Game";
+			productName = "The Simon Effect (No Tabs)";
+			productReference = FF5C64A81CCAC5E1007AE827 /* Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FF5C64BB1CCAC5E1007AE827 /* Two Buttons - The Reflex Tapping GameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF5C64D31CCAC5E1007AE827 /* Build configuration list for PBXNativeTarget "Two Buttons - The Reflex Tapping GameTests" */;
+			buildPhases = (
+				FF5C64B81CCAC5E1007AE827 /* Sources */,
+				FF5C64B91CCAC5E1007AE827 /* Frameworks */,
+				FF5C64BA1CCAC5E1007AE827 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF5C64BE1CCAC5E1007AE827 /* PBXTargetDependency */,
+			);
+			name = "Two Buttons - The Reflex Tapping GameTests";
+			productName = "The Simon Effect (No Tabs)Tests";
+			productReference = FF5C64BC1CCAC5E1007AE827 /* Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FF5C64C61CCAC5E1007AE827 /* Two Buttons - The Reflex Tapping GameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF5C64D61CCAC5E1007AE827 /* Build configuration list for PBXNativeTarget "Two Buttons - The Reflex Tapping GameUITests" */;
+			buildPhases = (
+				FF5C64C31CCAC5E1007AE827 /* Sources */,
+				FF5C64C41CCAC5E1007AE827 /* Frameworks */,
+				FF5C64C51CCAC5E1007AE827 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF5C64C91CCAC5E1007AE827 /* PBXTargetDependency */,
+			);
+			name = "Two Buttons - The Reflex Tapping GameUITests";
+			productName = "The Simon Effect (No Tabs)UITests";
+			productReference = FF5C64C71CCAC5E1007AE827 /* Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF5C64A01CCAC5E1007AE827 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Avery Vine";
+				TargetAttributes = {
+					FF5C64A71CCAC5E1007AE827 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 2Z33772VE8;
+						DevelopmentTeamName = "Avery Vine";
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+					FF5C64BB1CCAC5E1007AE827 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = DMU5ZKR3US;
+						LastSwiftMigration = 0800;
+						TestTargetID = FF5C64A71CCAC5E1007AE827;
+					};
+					FF5C64C61CCAC5E1007AE827 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = DMU5ZKR3US;
+						LastSwiftMigration = 0800;
+						TestTargetID = FF5C64A71CCAC5E1007AE827;
+					};
+				};
+			};
+			buildConfigurationList = FF5C64A31CCAC5E1007AE827 /* Build configuration list for PBXProject "Two Buttons - The Reflex Tapping Game" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FF5C649F1CCAC5E1007AE827;
+			productRefGroup = FF5C64A91CCAC5E1007AE827 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF5C64A71CCAC5E1007AE827 /* Two Buttons - The Reflex Tapping Game */,
+				FF5C64BB1CCAC5E1007AE827 /* Two Buttons - The Reflex Tapping GameTests */,
+				FF5C64C61CCAC5E1007AE827 /* Two Buttons - The Reflex Tapping GameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FF5C64A61CCAC5E1007AE827 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF5C64B61CCAC5E1007AE827 /* LaunchScreen.storyboard in Resources */,
+				FF5C64B31CCAC5E1007AE827 /* Assets.xcassets in Resources */,
+				FF5C64B11CCAC5E1007AE827 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF5C64BA1CCAC5E1007AE827 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF5C64C51CCAC5E1007AE827 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF5C64A41CCAC5E1007AE827 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF5C64DA1CCAC676007AE827 /* InGameViewController.swift in Sources */,
+				FF5C64AE1CCAC5E1007AE827 /* HomeViewController.swift in Sources */,
+				FF1DE42C1CCAE6F500ECA05A /* Data.swift in Sources */,
+				FF5C64AC1CCAC5E1007AE827 /* AppDelegate.swift in Sources */,
+				FF1DE42A1CCAE02500ECA05A /* SettingsViewController.swift in Sources */,
+				FF1DE4281CCADE1800ECA05A /* StatisticsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF5C64B81CCAC5E1007AE827 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF5C64C11CCAC5E1007AE827 /* The_Simon_Effect__No_Tabs_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF5C64C31CCAC5E1007AE827 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF5C64CC1CCAC5E1007AE827 /* The_Simon_Effect__No_Tabs_UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF5C64BE1CCAC5E1007AE827 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF5C64A71CCAC5E1007AE827 /* Two Buttons - The Reflex Tapping Game */;
+			targetProxy = FF5C64BD1CCAC5E1007AE827 /* PBXContainerItemProxy */;
+		};
+		FF5C64C91CCAC5E1007AE827 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF5C64A71CCAC5E1007AE827 /* Two Buttons - The Reflex Tapping Game */;
+			targetProxy = FF5C64C81CCAC5E1007AE827 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FF5C64AF1CCAC5E1007AE827 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF5C64B01CCAC5E1007AE827 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FF5C64B41CCAC5E1007AE827 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF5C64B51CCAC5E1007AE827 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FF5C64CE1CCAC5E1007AE827 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FF5C64CF1CCAC5E1007AE827 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF5C64D11CCAC5E1007AE827 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				INFOPLIST_FILE = "The Simon Effect (No Tabs)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vine.TwoButtonsTheReflexTappingGame;
+				PRODUCT_NAME = "Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FF5C64D21CCAC5E1007AE827 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				INFOPLIST_FILE = "The Simon Effect (No Tabs)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vine.TwoButtonsTheReflexTappingGame;
+				PRODUCT_NAME = "Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		FF5C64D41CCAC5E1007AE827 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "The Simon Effect (No Tabs)Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vine.The-Simon-Effect--No-Tabs-Tests";
+				PRODUCT_NAME = "Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename.app/Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename";
+			};
+			name = Debug;
+		};
+		FF5C64D51CCAC5E1007AE827 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "The Simon Effect (No Tabs)Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vine.The-Simon-Effect--No-Tabs-Tests";
+				PRODUCT_NAME = "Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename.app/Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename";
+			};
+			name = Release;
+		};
+		FF5C64D71CCAC5E1007AE827 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "The Simon Effect (No Tabs)UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vine.The-Simon-Effect--No-Tabs-UITests";
+				PRODUCT_NAME = "Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "The Simon Effect (No Tabs)";
+			};
+			name = Debug;
+		};
+		FF5C64D81CCAC5E1007AE827 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "The Simon Effect (No Tabs)UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vine.The-Simon-Effect--No-Tabs-UITests";
+				PRODUCT_NAME = "Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "The Simon Effect (No Tabs)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF5C64A31CCAC5E1007AE827 /* Build configuration list for PBXProject "Two Buttons - The Reflex Tapping Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF5C64CE1CCAC5E1007AE827 /* Debug */,
+				FF5C64CF1CCAC5E1007AE827 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF5C64D01CCAC5E1007AE827 /* Build configuration list for PBXNativeTarget "Two Buttons - The Reflex Tapping Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF5C64D11CCAC5E1007AE827 /* Debug */,
+				FF5C64D21CCAC5E1007AE827 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF5C64D31CCAC5E1007AE827 /* Build configuration list for PBXNativeTarget "Two Buttons - The Reflex Tapping GameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF5C64D41CCAC5E1007AE827 /* Debug */,
+				FF5C64D51CCAC5E1007AE827 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF5C64D61CCAC5E1007AE827 /* Build configuration list for PBXNativeTarget "Two Buttons - The Reflex Tapping GameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF5C64D71CCAC5E1007AE827 /* Debug */,
+				FF5C64D81CCAC5E1007AE827 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FF5C64A01CCAC5E1007AE827 /* Project object */;
+}
