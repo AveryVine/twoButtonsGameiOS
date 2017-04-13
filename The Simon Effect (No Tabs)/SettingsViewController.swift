@@ -126,7 +126,7 @@ class SettingsViewController: UIViewController, UIAlertViewDelegate, MFMailCompo
     }
     
     @IBAction func alertUserOfErase() {
-        let alert = UIAlertController(title: "Erase Statistics", message: "Are you sure you want to erase all of your statistics? This cannot be undone.", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Erase Statistics", message: "Are you sure you want to erase all of your statistics? This cannot be undone. (Note: Game Center scores will remain unchanged)", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Erase", style: .default, handler: { action in
             if action.style == .default {
                 self.eraseStatistics()

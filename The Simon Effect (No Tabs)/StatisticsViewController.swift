@@ -188,16 +188,16 @@ class StatisticsViewController: UIViewController, GKGameCenterControllerDelegate
     func storeInGameCentre(score: Double) {
         if score < 60 {
             print("Submitting score: \(score)")
-            let sScore = GKScore(leaderboardIdentifier: "grp.FastestTime")
+            let sScore = GKScore(leaderboardIdentifier: "grp.FastestAvgTime")
             sScore.value = Int64(Double(score * 100.0))
-            
-            GKScore.report([sScore], withCompletionHandler: { (error: NSError?) -> Void in
+            GKScore.report([sScore]) {(error) in
                 if error != nil {
                     print(error!.localizedDescription)
-                } else {
+                }
+                else {
                     print("Score submitted")
                 }
-                } as? (Error?) -> Void)
+            }
         }
         else {
             print("Score too large: \(score)")
@@ -214,7 +214,7 @@ class StatisticsViewController: UIViewController, GKGameCenterControllerDelegate
             let gcVC: GKGameCenterViewController = GKGameCenterViewController()
             gcVC.gameCenterDelegate = self
             gcVC.viewState = GKGameCenterViewControllerState.leaderboards
-            gcVC.leaderboardIdentifier = "grp.FastestTime"
+            gcVC.leaderboardIdentifier = "grp.FastestAvgTime"
             self.present(gcVC, animated: true, completion: nil)
         }
         else {
