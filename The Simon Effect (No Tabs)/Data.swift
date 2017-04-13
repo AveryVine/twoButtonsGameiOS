@@ -41,7 +41,7 @@ class Data {
     
     let credits: String = "Programmer: Avery Vine\n\nGame Concept: Clara Burgener\n\nApp Icon Design: Annika Vine\n\nBeta Testers: Mitchell Grant, Clara Burgener, Toby Sutherland, Connor McCrindle, Shayne McCrindle\n\nBased on the Simon Effect"
     
-    let adMessage: String = "Having Ads helps me (the developer) provide you with this app, as it offsets the costs of hosting this app on the App Store. That said, I understand that not everyone wants Ads, and some don't want to pay to remove them. Please consider carefully before turning them off (you can always turn them on again later). Ads will never appear in-game."
+    let gameCentreMessage: String = "You might not be signed into Game Center. To activate this feature, go to the \"Settings\" app, then scroll down to \"Game Center\" and sign in."
     
     //--- Persistant Data Functions ---//
     init() {

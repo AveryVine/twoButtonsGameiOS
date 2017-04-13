@@ -10,6 +10,7 @@
 		FF1DE4281CCADE1800ECA05A /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1DE4271CCADE1800ECA05A /* StatisticsViewController.swift */; };
 		FF1DE42A1CCAE02500ECA05A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1DE4291CCAE02500ECA05A /* SettingsViewController.swift */; };
 		FF1DE42C1CCAE6F500ECA05A /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1DE42B1CCAE6F500ECA05A /* Data.swift */; };
+		FF238F741E9F208D0051B5AE /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF238F731E9F208D0051B5AE /* GameKit.framework */; };
 		FF5C64AC1CCAC5E1007AE827 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C64AB1CCAC5E1007AE827 /* AppDelegate.swift */; };
 		FF5C64AE1CCAC5E1007AE827 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C64AD1CCAC5E1007AE827 /* HomeViewController.swift */; };
 		FF5C64B11CCAC5E1007AE827 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF5C64AF1CCAC5E1007AE827 /* Main.storyboard */; };
@@ -18,7 +19,6 @@
 		FF5C64C11CCAC5E1007AE827 /* The_Simon_Effect__No_Tabs_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C64C01CCAC5E1007AE827 /* The_Simon_Effect__No_Tabs_Tests.swift */; };
 		FF5C64CC1CCAC5E1007AE827 /* The_Simon_Effect__No_Tabs_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C64CB1CCAC5E1007AE827 /* The_Simon_Effect__No_Tabs_UITests.swift */; };
 		FF5C64DA1CCAC676007AE827 /* InGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C64D91CCAC676007AE827 /* InGameViewController.swift */; };
-		FF79F4261CD923C00072E8D5 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF79F4241CD91EB90072E8D5 /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +42,7 @@
 		FF1DE4271CCADE1800ECA05A /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		FF1DE4291CCAE02500ECA05A /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		FF1DE42B1CCAE6F500ECA05A /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		FF238F731E9F208D0051B5AE /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		FF5C64A81CCAC5E1007AE827 /* Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5C64AB1CCAC5E1007AE827 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF5C64AD1CCAC5E1007AE827 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -56,7 +57,6 @@
 		FF5C64CB1CCAC5E1007AE827 /* The_Simon_Effect__No_Tabs_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Simon_Effect__No_Tabs_UITests.swift; sourceTree = "<group>"; };
 		FF5C64CD1CCAC5E1007AE827 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF5C64D91CCAC676007AE827 /* InGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InGameViewController.swift; sourceTree = "<group>"; };
-		FF79F4241CD91EB90072E8D5 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF79F4261CD923C00072E8D5 /* iAd.framework in Frameworks */,
+				FF238F741E9F208D0051B5AE /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,11 +88,11 @@
 		FF5C649F1CCAC5E1007AE827 = {
 			isa = PBXGroup;
 			children = (
-				FF79F4241CD91EB90072E8D5 /* iAd.framework */,
 				FF5C64AA1CCAC5E1007AE827 /* The Simon Effect (No Tabs) */,
 				FF5C64BF1CCAC5E1007AE827 /* The Simon Effect (No Tabs)Tests */,
 				FF5C64CA1CCAC5E1007AE827 /* The Simon Effect (No Tabs)UITests */,
 				FF5C64A91CCAC5E1007AE827 /* Products */,
+				FF7C81721E9EE61600FB32B9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,6 +139,14 @@
 				FF5C64CD1CCAC5E1007AE827 /* Info.plist */,
 			);
 			path = "The Simon Effect (No Tabs)UITests";
+			sourceTree = "<group>";
+		};
+		FF7C81721E9EE61600FB32B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF238F731E9F208D0051B5AE /* GameKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,7 +212,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Avery Vine";
 				TargetAttributes = {
 					FF5C64A71CCAC5E1007AE827 = {
@@ -213,6 +221,11 @@
 						DevelopmentTeamName = "Avery Vine";
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
 					};
 					FF5C64BB1CCAC5E1007AE827 = {
 						CreatedOnToolsVersion = 7.3;
@@ -353,8 +366,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -398,8 +413,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -430,12 +447,14 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 2Z33772VE8;
 				INFOPLIST_FILE = "The Simon Effect (No Tabs)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vine.TwoButtonsTheReflexTappingGame;
 				PRODUCT_NAME = "Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -447,12 +466,14 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 2Z33772VE8;
 				INFOPLIST_FILE = "The Simon Effect (No Tabs)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vine.TwoButtonsTheReflexTappingGame;
 				PRODUCT_NAME = "Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};

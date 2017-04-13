@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import GameKit
 
-class StatisticsViewController: UIViewController {
+class StatisticsViewController: UIViewController, GKGameCenterControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,7 @@ class StatisticsViewController: UIViewController {
     @IBOutlet var averageIncongruentResponseTimeLabel: UILabel!
     @IBOutlet var lowestCorrectResponseTimeLabel: UILabel!
     @IBOutlet var lightbulbButton: UIButton!
+    @IBOutlet var leaderboardButton: UIButton!
     
     //--- Other Elements --///
     var responseTime: Double = 0.0
@@ -50,7 +52,7 @@ class StatisticsViewController: UIViewController {
             self.presentingViewController!.presentingViewController!.dismiss(animated: false, completion: nil)
         }
         else {
-            data.lastSegue = "StatisticsToHome"
+            data.lastSegue = "StatisticsToInGame"
             self.presentingViewController!.dismiss(animated: false, completion: nil)
         }
     }
@@ -92,12 +94,11 @@ class StatisticsViewController: UIViewController {
     
     func setButtonAttributes() {
         if data.lastSegue != "InGameToStatistics" {
-            retryButton.isHidden = true
-        }
-        else {
-            retryButton.isHidden = false
+            retryButton.setTitle("START", for: UIControlState.normal)
         }
         lightbulbButton.setImage(UIImage(named: "Lightbulb.png"), for: UIControlState())
+        lightbulbButton.layer.cornerRadius = 10
+        lightbulbButton.layer.borderWidth = 1
     }
     
     func setLabelAttributes() {
@@ -118,6 +119,9 @@ class StatisticsViewController: UIViewController {
                             }
                         }
                     }
+                }
+                if data.correctScore == 10 && HomeViewController.gcEnabled {
+                    storeInGameCentre(score: (responseTime / Double(data.correctScore)))
                 }
                 correctResponseTimeLabel.text! = NSString(format: "Average Correct Response Time: %.2f Seconds", (responseTime / Double(data.correctScore))) as String
                 responseTime = 0.0
@@ -181,15 +185,43 @@ class StatisticsViewController: UIViewController {
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func storeInGameCentre(score: Double) {
+        if score < 60 {
+            print("Submitting score: \(score)")
+            let sScore = GKScore(leaderboardIdentifier: "grp.FastestTime")
+            sScore.value = Int64(Double(score * 100.0))
+            
+            GKScore.report([sScore], withCompletionHandler: { (error: NSError?) -> Void in
+                if error != nil {
+                    print(error!.localizedDescription)
+                } else {
+                    print("Score submitted")
+                }
+                } as? (Error?) -> Void)
+        }
+        else {
+            print("Score too large: \(score)")
+        }
     }
-    */
+    
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func showLeaderboard(sender: UIButton) {
+        if HomeViewController.gcEnabled {
+            let gcVC: GKGameCenterViewController = GKGameCenterViewController()
+            gcVC.gameCenterDelegate = self
+            gcVC.viewState = GKGameCenterViewControllerState.leaderboards
+            gcVC.leaderboardIdentifier = "grp.FastestTime"
+            self.present(gcVC, animated: true, completion: nil)
+        }
+        else {
+            let alert = UIAlertController(title: "Game Center Unavailable", message: data.gameCentreMessage, preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
 
 }

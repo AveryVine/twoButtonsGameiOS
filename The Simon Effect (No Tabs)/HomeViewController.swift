@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import GameKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, GKGameCenterControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        authenticateLocalPlayer()
         setAttributes()
     }
     
@@ -38,6 +40,8 @@ class HomeViewController: UIViewController {
     //--- Other Elements ---//
     var timer: Timer! = nil
     var countdown: Int = 0
+    static var gcEnabled = Bool() // Stores if the user has Game Center enabled
+    var gcDefaultLeaderBoard = String() // Stores the default leaderboardID
     
     //--- UI Functions ---//
     @IBAction func startButtonPressed() {
@@ -94,6 +98,8 @@ class HomeViewController: UIViewController {
         startButton.titleLabel!.font = UIFont(name: "Verdana", size: 18)
         startButton.titleLabel!.font = startButton.titleLabel!.font.withSize(28)
         lightbulbButton.setImage(UIImage(named: "Lightbulb.png"), for: UIControlState())
+        lightbulbButton.layer.cornerRadius = 10
+        lightbulbButton.layer.borderWidth = 1
     }
     
     func setLabelAttributes() {
@@ -120,6 +126,41 @@ class HomeViewController: UIViewController {
         timerLabel.text! = "\(countdown)"
     }
     
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismiss(animated: true, completion: nil)
+    }
+    
+    func authenticateLocalPlayer() {
+        let localPlayer: GKLocalPlayer = GKLocalPlayer.localPlayer()
+        
+        localPlayer.authenticateHandler = {(ViewController, error) -> Void in
+            if((ViewController) != nil) {
+                // 1 Show login if player is not logged in
+                self.present(ViewController!, animated: true, completion: nil)
+            } else if (localPlayer.isAuthenticated) {
+                // 2 Player is already euthenticated & logged in, load game center
+                HomeViewController.gcEnabled = true
+                
+                // Get the default leaderboard ID
+                localPlayer.loadDefaultLeaderboardIdentifier(completionHandler: { (leaderboardIdentifer: String?, error: NSError?) -> Void in
+                    if error != nil {
+                        print(error!)
+                    } else {
+                        self.gcDefaultLeaderBoard = leaderboardIdentifer!
+                    }
+                    } as? (String?, Error?) -> Void)
+                
+                
+            } else {
+                // 3 Game center is not enabled on the users device
+                HomeViewController.gcEnabled = false
+                print("Local player could not be authenticated, disabling game center")
+                print(error!)
+            }
+            
+        }
+        
+    }
     
 }
 

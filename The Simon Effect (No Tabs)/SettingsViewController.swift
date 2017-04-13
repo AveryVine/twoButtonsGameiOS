@@ -37,7 +37,6 @@ class SettingsViewController: UIViewController, UIAlertViewDelegate, MFMailCompo
     @IBOutlet var colorSquare: UIButton!
     @IBOutlet var resetColorsButton: UIButton!
     @IBOutlet var feedbackButton: UIButton!
-    @IBOutlet var toggleAdsButton: UIButton!
     @IBOutlet var lightbulbButton: UIButton!
     
     //--- Other Elements ---//
@@ -169,18 +168,10 @@ class SettingsViewController: UIViewController, UIAlertViewDelegate, MFMailCompo
     }
     
     func setButtonAttributes() {
-        // Start Code for implementing ads (future release)
-        /*
-        if data.adsAreOff {
-            toggleAdsButton.setTitle("Turn On Ads", for: UIControlState())
-        }
-        else {
-            toggleAdsButton.setTitle("Remove Ads", for: UIControlState())
-        }
-        */
-        // End Code for implementing ads (future release)
         
         lightbulbButton.setImage(UIImage(named: "Lightbulb.png"), for: UIControlState())
+        lightbulbButton.layer.cornerRadius = 10
+        lightbulbButton.layer.borderWidth = 1
     }
     
     func setSquareAttributes() {
@@ -220,15 +211,6 @@ class SettingsViewController: UIViewController, UIAlertViewDelegate, MFMailCompo
             }
         })
     }
-    
-    // Start Code for implementing ads (future release)
-    /*
-    func toggleAds() {
-        data.adsAreOff = !data.adsAreOff
-        setButtonAttributes()
-    }
-     */
-    // End Code for implementing ads (future release)
     
     func eraseStatistics() {
         data.averageCorrectResponseTime = 0.0

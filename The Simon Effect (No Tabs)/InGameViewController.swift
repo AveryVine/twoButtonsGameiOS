@@ -36,6 +36,12 @@ class InGameViewController: UIViewController {
     @IBOutlet var squareOne: UIButton!
     @IBOutlet var squareTwo: UIButton!
     @IBOutlet var numberCompleted: UILabel!
+    @IBOutlet var viewLeftHalf: UIView!
+    @IBOutlet var viewRightHalf: UIView!
+    @IBOutlet var viewTopLeft: UIView!
+    @IBOutlet var viewBottomLeft: UIView!
+    @IBOutlet var viewTopRight: UIView!
+    @IBOutlet var viewBottomRight: UIView!
     
     //--- Other Elements ---//
     var squarePosition: Int = 0
@@ -68,6 +74,12 @@ class InGameViewController: UIViewController {
     //--- Other Functions ---//
     func setAttributes(_ visible: Bool) {
         view.backgroundColor = UIColor(red: 0xff/255, green: 0xff/255, blue: 0xcc/255, alpha: 1.0)
+        viewLeftHalf.backgroundColor = UIColor(red: 0xff/255, green: 0xff/255, blue: 0xcc/255, alpha: 1.0)
+        viewRightHalf.backgroundColor = UIColor(red: 0xff/255, green: 0xff/255, blue: 0xcc/255, alpha: 1.0)
+        viewTopLeft.backgroundColor = UIColor(red: 0xff/255, green: 0xff/255, blue: 0xcc/255, alpha: 1.0)
+        viewTopRight.backgroundColor = UIColor(red: 0xff/255, green: 0xff/255, blue: 0xcc/255, alpha: 1.0)
+        viewBottomLeft.backgroundColor = UIColor(red: 0xff/255, green: 0xff/255, blue: 0xcc/255, alpha: 1.0)
+        viewBottomRight.backgroundColor = UIColor(red: 0xff/255, green: 0xff/255, blue: 0xcc/255, alpha: 1.0)
         setButtonAttributes(visible)
         setGameAttributes(visible)
     }
