@@ -40,6 +40,7 @@ class StatisticsViewController: UIViewController, GKGameCenterControllerDelegate
     @IBOutlet var lowestCorrectResponseTimeLabel: UILabel!
     @IBOutlet var lightbulbButton: UIButton!
     @IBOutlet var leaderboardButton: UIButton!
+    @IBOutlet var leaderboardSpinner: UIActivityIndicatorView!
     
     //--- Other Elements --///
     var responseTime: Double = 0.0
@@ -83,6 +84,8 @@ class StatisticsViewController: UIViewController, GKGameCenterControllerDelegate
     //--- Other Functions ---//
     func setAttributes() {
         view.backgroundColor = UIColor(red: 0xff/255, green: 0xff/255, blue: 0xcc/255, alpha: 1.0)
+        leaderboardSpinner.isHidden = true
+        leaderboardSpinner.hidesWhenStopped = true
         setLabelAttributes()
     }
     
@@ -186,18 +189,21 @@ class StatisticsViewController: UIViewController, GKGameCenterControllerDelegate
     }
     
     func storeInGameCentre(score: Double) {
+//        leaderboardSpinner.isHidden = false
+        leaderboardSpinner.startAnimating()
         if score < 60 {
             print("Submitting score: \(score)")
-            let sScore = GKScore(leaderboardIdentifier: "grp.FastestAvgTime")
+            let sScore = GKScore(leaderboardIdentifier: HomeViewController.leaderboard)
             sScore.value = Int64(Double(score * 100.0))
-            GKScore.report([sScore]) {(error) in
+            GKScore.report([sScore], withCompletionHandler: {(error) in
                 if error != nil {
                     print(error!.localizedDescription)
                 }
                 else {
                     print("Score submitted")
                 }
-            }
+                self.leaderboardSpinner.stopAnimating()
+            })
         }
         else {
             print("Score too large: \(score)")
@@ -214,7 +220,7 @@ class StatisticsViewController: UIViewController, GKGameCenterControllerDelegate
             let gcVC: GKGameCenterViewController = GKGameCenterViewController()
             gcVC.gameCenterDelegate = self
             gcVC.viewState = GKGameCenterViewControllerState.leaderboards
-            gcVC.leaderboardIdentifier = "grp.FastestAvgTime"
+            gcVC.leaderboardIdentifier = HomeViewController.leaderboard
             self.present(gcVC, animated: true, completion: nil)
         }
         else {

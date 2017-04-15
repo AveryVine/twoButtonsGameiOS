@@ -42,6 +42,7 @@ class HomeViewController: UIViewController, GKGameCenterControllerDelegate {
     var countdown: Int = 0
     static var gcEnabled = Bool() // Stores if the user has Game Center enabled
     var gcDefaultLeaderBoard = String() // Stores the default leaderboardID
+    static var leaderboard = "com.vine.twobuttonsleaderboard"
     
     //--- UI Functions ---//
     @IBAction func startButtonPressed() {
