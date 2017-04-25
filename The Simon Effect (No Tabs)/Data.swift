@@ -28,6 +28,8 @@ class Data {
     //--- Other Data ---//
     let gameName: String = "Two Buttons"
     let emailAddress: String = "twobuttonsdeveloper@icloud.com"
+    let leaderboardFastestAverageTime = "com.vine.twobuttonsleaderboard"
+    let leaderboardFastestSingleResponse = "com.vine.twobuttonsleaderboard2"
     var lastSegue: String = ""
     var correctScore: Int = 0
     var incorrectScore: Int = 0
