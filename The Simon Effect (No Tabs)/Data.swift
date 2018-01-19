@@ -28,6 +28,8 @@ class Data {
     //--- Other Data ---//
     let gameName: String = "Two Buttons"
     let emailAddress: String = "twobuttonsdeveloper@icloud.com"
+    let leaderboardFastestAverageTime = "com.vine.twobuttonsleaderboard"
+    let leaderboardFastestSingleResponse = "com.vine.twobuttonsleaderboard2"
     var lastSegue: String = ""
     var correctScore: Int = 0
     var incorrectScore: Int = 0
@@ -39,7 +41,7 @@ class Data {
     
     let statsExplanation: String = "Average Correct Response Time:\nAverage time it takes to correctly match colours\n\nAverage Congruent Response Time:\nAverage time it takes to correctly match colours when the correctly-coloured button is directly beneath the square\n\nAverage Incongruent Response Time:\nAverage time it takes to correctly match colours when the correctly-coloured button is on the opposite side as the square\n\nLowest Correct Response Time:\nLowest time recorded for correctly matching colours (only recorded for games with no mistakes to prevent cheating)"
     
-    let credits: String = "Programmer: Avery Vine\n\nGame Concept: Clara Burgener\n\nApp Icon Design: Annika Vine\n\nBeta Testers: Mitchell Grant, Clara Burgener, Toby Sutherland, Connor McCrindle, Shayne McCrindle\n\nBased on the Simon Effect"
+    let credits: String = "Programmer: Avery Vine\n\nGame Concept: Clara Burgener\n\nApp Icon Design: Annika Vine\n\nSpecial Thanks To: Mitchell Grant, Clara Burgener, Toby Sutherland, Connor McCrindle, Shayne McCrindle\n\nBased on the Simon Effect"
     
     let gameCentreMessage: String = "You might not be signed into Game Center. To activate this feature, go to the \"Settings\" app, then scroll down to \"Game Center\" and sign in."
     

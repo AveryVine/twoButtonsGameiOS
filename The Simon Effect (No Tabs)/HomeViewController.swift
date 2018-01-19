@@ -41,7 +41,7 @@ class HomeViewController: UIViewController, GKGameCenterControllerDelegate {
     var timer: Timer! = nil
     var countdown: Int = 0
     static var gcEnabled = Bool() // Stores if the user has Game Center enabled
-    var gcDefaultLeaderBoard = String() // Stores the default leaderboardID
+    static var gcDefaultLeaderBoard = String() // Stores the default leaderboardID
     
     //--- UI Functions ---//
     @IBAction func startButtonPressed() {
@@ -115,7 +115,7 @@ class HomeViewController: UIViewController, GKGameCenterControllerDelegate {
         lightbulbButton.isHidden = true
     }
     
-    func updateCounter() {
+    @objc func updateCounter() {
         countdown -= 1
         if countdown == 0 {
             timer!.invalidate()
@@ -146,7 +146,7 @@ class HomeViewController: UIViewController, GKGameCenterControllerDelegate {
                     if error != nil {
                         print(error!)
                     } else {
-                        self.gcDefaultLeaderBoard = leaderboardIdentifer!
+                        HomeViewController.gcDefaultLeaderBoard = leaderboardIdentifer!
                     }
                     } as? (String?, Error?) -> Void)
                 
