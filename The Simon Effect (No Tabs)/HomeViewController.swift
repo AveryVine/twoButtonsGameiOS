@@ -115,7 +115,7 @@ class HomeViewController: UIViewController, GKGameCenterControllerDelegate {
         lightbulbButton.isHidden = true
     }
     
-    func updateCounter() {
+    @objc func updateCounter() {
         countdown -= 1
         if countdown == 0 {
             timer!.invalidate()
