@@ -449,7 +449,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 2Z33772VE8;
 				INFOPLIST_FILE = "The Simon Effect (No Tabs)/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vine.TwoButtonsTheReflexTappingGame;
 				PRODUCT_NAME = "Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename";
@@ -468,7 +468,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 2Z33772VE8;
 				INFOPLIST_FILE = "The Simon Effect (No Tabs)/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vine.TwoButtonsTheReflexTappingGame;
 				PRODUCT_NAME = "Two Buttons - The Reflex Tapping Game.temp_caseinsensitive_rename";
