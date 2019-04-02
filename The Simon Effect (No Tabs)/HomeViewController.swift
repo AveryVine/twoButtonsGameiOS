@@ -62,13 +62,13 @@ class HomeViewController: UIViewController, GKGameCenterControllerDelegate {
     }
     
     @IBAction func instructionsButtonPressed() {
-        let alert = UIAlertController(title: "Instructions - \(data.gameName)", message: data.instructions, preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Instructions - \(data.gameName)", message: data.instructions, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Let's Go!", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func lightbulbButtonPressed() {
-        let alert = UIAlertController(title: "Credits - \(data.gameName)", message: data.credits, preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Credits - \(data.gameName)", message: data.credits, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
@@ -92,12 +92,12 @@ class HomeViewController: UIViewController, GKGameCenterControllerDelegate {
     func setButtonAttributes() {
         startButton.layer.cornerRadius = 10
         startButton.layer.borderWidth = 1
-        startButton.setTitle(" START ", for: UIControlState())
+        startButton.setTitle(" START ", for: .normal)
         startButton.backgroundColor = UIColor.gray
-        startButton.setTitleColor(UIColor.white, for: UIControlState())
+        startButton.setTitleColor(UIColor.white, for: .normal)
         startButton.titleLabel!.font = UIFont(name: "Verdana", size: 18)
         startButton.titleLabel!.font = startButton.titleLabel!.font.withSize(28)
-        lightbulbButton.setImage(UIImage(named: "Lightbulb.png"), for: UIControlState())
+        lightbulbButton.setImage(UIImage(named: "Lightbulb.png"), for: .normal)
         lightbulbButton.layer.cornerRadius = 10
         lightbulbButton.layer.borderWidth = 1
     }
@@ -131,17 +131,13 @@ class HomeViewController: UIViewController, GKGameCenterControllerDelegate {
     }
     
     func authenticateLocalPlayer() {
-        let localPlayer: GKLocalPlayer = GKLocalPlayer.localPlayer()
+        let localPlayer: GKLocalPlayer = GKLocalPlayer.local
         
         localPlayer.authenticateHandler = {(ViewController, error) -> Void in
             if((ViewController) != nil) {
-                // 1 Show login if player is not logged in
                 self.present(ViewController!, animated: true, completion: nil)
             } else if (localPlayer.isAuthenticated) {
-                // 2 Player is already euthenticated & logged in, load game center
                 HomeViewController.gcEnabled = true
-                
-                // Get the default leaderboard ID
                 localPlayer.loadDefaultLeaderboardIdentifier(completionHandler: { (leaderboardIdentifer: String?, error: NSError?) -> Void in
                     if error != nil {
                         print(error!)
@@ -149,10 +145,7 @@ class HomeViewController: UIViewController, GKGameCenterControllerDelegate {
                         HomeViewController.gcDefaultLeaderBoard = leaderboardIdentifer!
                     }
                     } as? (String?, Error?) -> Void)
-                
-                
             } else {
-                // 3 Game center is not enabled on the users device
                 HomeViewController.gcEnabled = false
                 print("Local player could not be authenticated, disabling game center")
                 print(error!)
@@ -169,7 +162,6 @@ extension UIColor {
         let newRed = CGFloat(red)/255
         let newGreen = CGFloat(green)/255
         let newBlue = CGFloat(blue)/255
-        
         self.init(red: newRed, green: newGreen, blue: newBlue, alpha: 1.0)
     }
 }

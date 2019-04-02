@@ -55,26 +55,6 @@ class SettingsViewController: UIViewController, UIAlertViewDelegate, MFMailCompo
         setSquareAttributes()
     }
     
-    @IBAction func toggleAdsButtonPressed() {
-        // Start Code for implementing ads (future release)
-        /*
-        if !data.adsAreOff {
-            let alert = UIAlertController(title: "Turn Off Ads", message: data.adMessage, preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Remove Ads", style: .default, handler: { action in
-                if action.style == .default {
-                    self.toggleAds()
-                }
-            }))
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-        else {
-            toggleAds()
-        }
-         */
-        // End Code for implementing ads (future release)
-    }
-    
     @IBAction func feedbackButtonPressed() {
         if MFMailComposeViewController.canSendMail() {
             email.mailComposeDelegate = self
@@ -83,7 +63,7 @@ class SettingsViewController: UIViewController, UIAlertViewDelegate, MFMailCompo
             email.setMessageBody("Replace this text with your feedback!", isHTML: false)
             present(email, animated: true, completion: nil)
         } else {
-            let alert = UIAlertController(title: "Couldn't Open Feedback Editor", message: "Make sure your device is configured properly to send emails. This may include adding an email address in the Settings app, or ensuring that the Mail app is installed (iOS 10 only).", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Couldn't Open Feedback Editor", message: "Make sure your device is configured properly to send emails. This may include adding an email address in the Settings app, or ensuring that the Mail app is installed (iOS 10 only).", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
@@ -126,7 +106,7 @@ class SettingsViewController: UIViewController, UIAlertViewDelegate, MFMailCompo
     }
     
     @IBAction func alertUserOfErase() {
-        let alert = UIAlertController(title: "Erase Statistics", message: "Are you sure you want to erase all of your statistics? This cannot be undone. (Note: Game Center scores will remain unchanged)", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Erase Statistics", message: "Are you sure you want to erase all of your statistics? This cannot be undone. (Note: Game Center scores will remain unchanged)", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Erase", style: .default, handler: { action in
             if action.style == .default {
                 self.eraseStatistics()
@@ -137,7 +117,7 @@ class SettingsViewController: UIViewController, UIAlertViewDelegate, MFMailCompo
     }
     
     @IBAction func lightbulbButtonPressed() {
-        let alert = UIAlertController(title: "Credits - \(data.gameName)", message: data.credits, preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Credits - \(data.gameName)", message: data.credits, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
@@ -169,14 +149,14 @@ class SettingsViewController: UIViewController, UIAlertViewDelegate, MFMailCompo
     
     func setButtonAttributes() {
         
-        lightbulbButton.setImage(UIImage(named: "Lightbulb.png"), for: UIControlState())
+        lightbulbButton.setImage(UIImage(named: "Lightbulb.png"), for: .normal)
         lightbulbButton.layer.cornerRadius = 10
         lightbulbButton.layer.borderWidth = 1
     }
     
     func setSquareAttributes() {
         colorSquare.layer.borderWidth = 1
-        colorSquare.setTitle("", for: UIControlState())
+        colorSquare.setTitle("", for: UIControl.State())
         if selectedButton == 0 {
             colorSquare.backgroundColor = UIColor(red: data.buttonOneRed, green: data.buttonOneGreen, blue: data.buttonOneBlue)
         }
@@ -193,19 +173,19 @@ class SettingsViewController: UIViewController, UIAlertViewDelegate, MFMailCompo
         controller.dismiss(animated: true, completion: {
             switch result {
             case MFMailComposeResult.sent:
-                let alert = UIAlertController(title: "Feedback Email Sent", message: "Thanks for your input!", preferredStyle: UIAlertControllerStyle.alert)
+                let alert = UIAlertController(title: "Feedback Email Sent", message: "Thanks for your input!", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             case MFMailComposeResult.saved:
-                let alert = UIAlertController(title: "Feedback Email Saved", message: "Your feedback email was saved for later.", preferredStyle: UIAlertControllerStyle.alert)
+                let alert = UIAlertController(title: "Feedback Email Saved", message: "Your feedback email was saved for later.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             case MFMailComposeResult.cancelled:
-                let alert = UIAlertController(title: "Feedback Email Cancelled", message: "Please don't hesitate to give feedback later on!", preferredStyle: UIAlertControllerStyle.alert)
+                let alert = UIAlertController(title: "Feedback Email Cancelled", message: "Please don't hesitate to give feedback later on!", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             default:
-                let alert = UIAlertController(title: "Feedback Email Failed to Send", message: "Uh oh! Something went wrong! Check your email settings.", preferredStyle: UIAlertControllerStyle.alert)
+                let alert = UIAlertController(title: "Feedback Email Failed to Send", message: "Uh oh! Something went wrong! Check your email settings.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }

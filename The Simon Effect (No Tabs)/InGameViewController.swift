@@ -125,9 +125,9 @@ class InGameViewController: UIViewController {
             greenData = data.buttonTwoGreen
             blueData = data.buttonTwoBlue
         }
-        selectedButton.setTitleColor(getButtonTitleColor(), for: UIControlState())
+        selectedButton.setTitleColor(getButtonTitleColor(), for: .normal)
         selectedButton.titleLabel!.font = UIFont(name: "Verdana", size: 26)
-        selectedButton.setTitle("", for: UIControlState())
+        selectedButton.setTitle("", for: .normal)
         selectedButton.backgroundColor = UIColor(red: redData, green: greenData, blue: blueData)
         selectedButton.layer.borderWidth = 1
         selectedButton.layer.cornerRadius = 5
@@ -178,7 +178,7 @@ class InGameViewController: UIViewController {
     
     func buttonClicked(_ button: UIButton) {
         analyzeData(button)
-        currentSquare.backgroundColor = UIColor.clear
+        currentSquare.backgroundColor = .clear
         currentSquare.layer.borderWidth = 0
         currentSquare.layer.borderColor = UIColor.clear.cgColor
         numberCompleted.text! = "Completed: \(data.correctScore + data.incorrectScore)"

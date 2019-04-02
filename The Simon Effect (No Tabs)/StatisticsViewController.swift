@@ -69,13 +69,13 @@ class StatisticsViewController: UIViewController, GKGameCenterControllerDelegate
     }
     
     @IBAction func statsExplanationButtonPressed() {
-        let alert = UIAlertController(title: "Statistics - Explanation", message: data.statsExplanation, preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Statistics - Explanation", message: data.statsExplanation, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func lightbulbButtonPressed() {
-        let alert = UIAlertController(title: "Credits - \(data.gameName)", message: data.credits, preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Credits - \(data.gameName)", message: data.credits, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
@@ -94,9 +94,9 @@ class StatisticsViewController: UIViewController, GKGameCenterControllerDelegate
     
     func setButtonAttributes() {
         if data.lastSegue != "InGameToStatistics" {
-            retryButton.setTitle("START", for: UIControlState.normal)
+            retryButton.setTitle("START", for: .normal)
         }
-        lightbulbButton.setImage(UIImage(named: "Lightbulb.png"), for: UIControlState())
+        lightbulbButton.setImage(UIImage(named: "Lightbulb.png"), for: .normal)
         lightbulbButton.layer.cornerRadius = 10
         lightbulbButton.layer.borderWidth = 1
     }
@@ -219,7 +219,7 @@ class StatisticsViewController: UIViewController, GKGameCenterControllerDelegate
             self.present(gcVC, animated: true, completion: nil)
         }
         else {
-            let alert = UIAlertController(title: "Game Center Unavailable", message: data.gameCentreMessage, preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Game Center Unavailable", message: data.gameCentreMessage, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
